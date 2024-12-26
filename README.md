@@ -51,7 +51,7 @@ ANARCI and SCALOP must be installed in the SOFTWARE folder of the app.
 
 
 ### How to run
-The app can be executed locally from within R by running the following commands:
+The app can be executed locally from within R by running the following commands:<br/>
 setwd("/AbPTM_HOME/")#..must be defined as the app root folder..<br/>
 library(shiny)<br/>
-runApp("AbPTM.R")<br/>
+runApp("AbPTM.R")
