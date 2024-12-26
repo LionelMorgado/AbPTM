@@ -13,14 +13,16 @@ Results can be downloaded in tsv format for further analysis or archiving purpos
 
 ## Overview of the project directory tree
 
-    <root_dir> |> AbPTM.R
+    <root_dir> |>  AbPTM.R
                | 
-               |     CODE |> AbPTM_aux.R (auxiliary functions)
-               |          |> AbPTM_help.R (code for help section)
-               |          |> AbPTM_themes.R (additional interface elements)
+               |>     CODE |> AbPTM_aux.R (auxiliary functions)
+               |           |> AbPTM_help.R (code for help section)
+               |           |> AbPTM_themes.R (additional interface elements)
                |               
-               | SOFTWARE |> ANARCI
-               |          |> SCALOP              
+               |> SOFTWARE |> ANARCI
+               |           |> SCALOP
+               |
+               |>      www |> AbPTM_logo.png
                 
 ---
 
