@@ -1,4 +1,5 @@
 # AbPTM
+![AbPTM_prtscn](https://github.com/user-attachments/assets/c682665b-c8d1-4409-9ee2-5a2f08fa9bcd)
 
 ## Short description
 AbPTM is a web-based app developed in R/Shiny designed to detect residues prone to post-translational modifications in antibody protein sequences.
@@ -10,7 +11,6 @@ The tool allows to create a comprehensive profile for each input sequence, which
 * Indication of residue physicochemical properties using multiple popular schemes.
 
 Results can be downloaded in tsv format for further analysis or archiving purposes.
-![AbPTM_prtscn](https://github.com/user-attachments/assets/c682665b-c8d1-4409-9ee2-5a2f08fa9bcd)
 
 ## Overview of the project directory tree
 
