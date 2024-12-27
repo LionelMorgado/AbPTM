@@ -40,7 +40,7 @@
 # HOW TO RUN
 #-------------------------------------------------------------------------------
 # The app can be executed locally from within R by running the following commands:
-# setwd("/mnt/c/Users/lionel/Stuff/GITHUBPortfolio/AbPTM/")#..must be defined as the app root folder..
+# setwd("PATH_TO_AbPTM/")#..must be defined as the app root folder..
 # library(shiny)
 # runApp("AbPTM.R")
 
@@ -125,12 +125,12 @@ ui = fluidPage(
 	  selectizeInput("cys", "Cysteine (non-conserved)", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("gludea", "Glutamine deamidation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("lysgly", "Lysine glycation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
-	  selectizeInput("man", "Mannosylation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("metoxy", "Methionine oxidation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("ngly", "N-glycosilation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
-	  selectizeInput("pro", "Proline (non-germline)", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
+	  selectizeInput("pro", "Proline isomerization", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("pyrfor", "Pyroglutamate formation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
-	  selectizeInput("trioxy", "Triptophan oxidation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
+	  selectizeInput("man", "Tryptophan mannosylation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
+	  selectizeInput("tryoxy", "Tryptophan oxidation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  HTML("<br/>"),
       tags$strong(h3("Numbering scheme")),
       selectInput("numbering_scheme", NULL, choices=c("Chothia"="chothia", "IMGT"="imgt"), selected="imgt"),
@@ -200,7 +200,7 @@ server = function(input, output, session) {
   shiny::updateSelectizeInput(session, "ngly", choices = c("Nx[S/T] (x not P)"), server = TRUE)
   shiny::updateSelectizeInput(session, "pro", choices = c("P"), server = TRUE)
   shiny::updateSelectizeInput(session, "pyrfor", choices = c("Q"), server = TRUE)
-  shiny::updateSelectizeInput(session, "trioxy", choices = c("W"), server = TRUE)
+  shiny::updateSelectizeInput(session, "tryoxy", choices = c("W"), server = TRUE)
 
   
   #..define number of current outputs (used to redefine output layout)..
@@ -291,7 +291,7 @@ print("Running SCALOP")
     if("Nx[S/T] (x not P)"%in%input$ng_gly){all_motifs = c(all_motifs, "N[^P](S|T)")}
     if("P"%in%input$pro){all_motifs = c(all_motifs, "P")}
     if("Q"%in%input$pyrfor){all_motifs = c(all_motifs, "Q")}
-    if("W"%in%input$trioxy){all_motifs = c(all_motifs, "W")}
+    if("W"%in%input$tryoxy){all_motifs = c(all_motifs, "W")}
 #print(paste("Motif search: ", all_motifs, sep=" "))
     
 	#..detect motifs..
