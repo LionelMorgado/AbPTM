@@ -40,11 +40,11 @@
 # HOW TO RUN
 #-------------------------------------------------------------------------------
 # The app can be executed locally from within R by running the following commands:
-# setwd("PATH_TO_AbPTM/")#..must be defined as the app root folder..
+# setwd("/mnt/c/Users/lionel/Stuff/GITHUBPortfolio/AbPTM/")# must be defined as the app root folder
 # library(shiny)
 # runApp("AbPTM.R")
 
-
+setwd("/home/AbPTM/")
 #-------------------------------------------------------------------------------
 # INIT PARAMS
 #-------------------------------------------------------------------------------
@@ -91,7 +91,7 @@ ui = fluidPage(
     shiny::tags$ul(class="abptm_header",
                    shiny::tags$li(class="abptm_header_title", "AbPTM | A tool to predict residues prone to post-translational modifications in antibody protein sequences"),
 				   shiny::tags$li(class="abptm_header_logo"),
-				   shiny::tags$img(style="float: right; padding: 11px 0 11px 0px;", src="AbPTM_logo.png", height=50)
+				   shiny::tags$img(style="float: right; padding: 11px 0 11px 0px;", src="./AbPTM_logo.png", height=50)
     )
   ),
   shiny::tags$script(type="text/javascript", src="jquery.slimscroll.min.js"),
@@ -127,7 +127,7 @@ ui = fluidPage(
 	  selectizeInput("lysgly", "Lysine glycation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("metoxy", "Methionine oxidation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("ngly", "N-glycosilation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
-	  selectizeInput("pro", "Proline isomerization", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
+	  selectizeInput("pro", "Proline (non-germline)", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("pyrfor", "Pyroglutamate formation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("man", "Tryptophan mannosylation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
 	  selectizeInput("tryoxy", "Tryptophan oxidation", choices=NULL, selected = NULL, multiple = TRUE, options = NULL),
@@ -427,3 +427,4 @@ print("Finished!")
 # Run App
 #-------------------------------------------------------------------------------
 shinyApp(ui, server)
+

@@ -1,5 +1,4 @@
 # AbPTM
-![AbPTM_prtscn](https://github.com/user-attachments/assets/c682665b-c8d1-4409-9ee2-5a2f08fa9bcd)
 
 ## Short description
 AbPTM is a web-based app developed in R/Shiny designed to detect residues prone to post-translational modifications in antibody protein sequences.
@@ -19,9 +18,6 @@ Results can be downloaded in tsv format for further analysis or archiving purpos
                |>     CODE |> AbPTM_aux.R (auxiliary functions)
                |           |> AbPTM_help.R (code for help section)
                |           |> AbPTM_themes.R (additional interface elements)
-               |               
-               |> SOFTWARE |> ANARCI
-               |           |> SCALOP
                |
                |>      www |> AbPTM_logo.png
                 
@@ -50,11 +46,11 @@ Follows a list of software dependencies.
 * [ANARCI](https://github.com/oxpig/ANARCI)  
 * [SCALOP](https://github.com/oxpig/SCALOP)  
 
-ANARCI and SCALOP must be installed in the SOFTWARE folder of the app.
+ANARCI and SCALOP must be installed and in he accessible via the terminal.
 
 
 ### How to run
 The app can be executed locally from within R by running the following commands:<br/>
-setwd("AbPTM_HOME/")#..must be defined as the app root folder..<br/>
-library(shiny)<br/>
-runApp("AbPTM.R")
+>setwd("AbPTM_HOME/")#..must be defined as the app root folder..<br/>
+>library(shiny)<br/>
+>runApp("AbPTM.R")
