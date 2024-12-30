@@ -6,7 +6,7 @@ abptm_colors = function(){
 }
 
 
-# Customized interface styling
+# Customized layout styling
 custom_css = ".abptm_icon {margin-right: 10px;}
               .well { background-color: white; }
               body { background-color: #f5f5f5; }
@@ -42,12 +42,3 @@ custom_header_css = "body {margin-top: 60px;}
 											box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #4682b4; }
 					.btn-info { background-color: #4682b4; border: 0px solid transparent; padding-top: 15px; padding-bottom: 15px; }
 					.btn-info.hover, .btn-info:active, .btn-info:hover { background-color: #00827b; }"
-
-abptm_header_logo = function(output) {
-  output$abptm_logo <- shiny::renderImage({
-
-    filename <- normalizePath(file.path(system.file("AbPTM_logo.png")))
-    list(src = filename, style = "margin-top:10px; margin-right:10px; height:30px;")
-
-  }, deleteFile = FALSE)
-}

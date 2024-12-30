@@ -1,4 +1,5 @@
  
+ 
 #-------------------------------------------------------------------------------
 # Residue colour schemes from JSAV
 #-------------------------------------------------------------------------------
@@ -19,7 +20,7 @@ clustal_pallete = c('#80a0f0','#f01505','#00ff00','#c048c0','#f08080','#00ff00',
 get_anarci = function(c_fasta, ab_names, ab_seqs, numbering_scheme, germ_species){
   
   #..run anarci..
-  c_cmd = paste("cd ./SOFTWARE/ANARCI/bin/ && ./ANARCI -i ", c_fasta, " --scheme ", numbering_scheme, germ_species, sep="")
+  c_cmd = paste("ANARCI -i ", c_fasta, " --scheme ", numbering_scheme, germ_species, sep="")
   c_data = system(c_cmd, intern=TRUE)
   
   # Parse anarci results
@@ -88,7 +89,7 @@ get_scalop = function(ab_names, ab_seqs, numbering_scheme){
   for(s in 1:tot_seqs){
     c_id = ab_names[s]
 
-    c_cmd = paste("cd ./SOFTWARE/SCALOP/bin/ && ./SCALOP -i ", ab_seqs[s], " --scheme ", numbering_scheme, " --definition ", numbering_scheme, sep="")
+    c_cmd = paste("SCALOP -i ", ab_seqs[s], " --scheme ", numbering_scheme, " --definition ", numbering_scheme, sep="")
     c_data = system(c_cmd, intern=TRUE)
 
     tot_res = length(c_data)
