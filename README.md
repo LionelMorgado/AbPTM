@@ -47,7 +47,7 @@ Follows a list of software dependencies.
 * [ANARCI](https://github.com/oxpig/ANARCI)  
 * [SCALOP](https://github.com/oxpig/SCALOP)  
 
-ANARCI and SCALOP must be installed and in he accessible via the terminal.
+ANARCI and SCALOP must be installed and accessible via the terminal.
 
 
 ### How to run
